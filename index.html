@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Calc</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="dropdown">
+            <input type="text" class="textBox" placeholder="Produto" readonly>
+            <div class="option">
+                <div onclick="show('Ilimitado')">Ilimitado</div>
+                <div onclick="show('Minutagem')">Minutagem</div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    function show(text) {
+        document.querySelector('.textBox').value = text
+    }
+    
+    let dropdown = document.querySelector('.dropdown');
+    
+    dropdown.onclick = function() {
+        dropdown.classList.toggle('active');
+    }
+    
+    /*
+    window.addEventListener('click', function(e){
+        if(document.getElementById('dropdown1').contains(e.target)){
+            dropdown.classList.toggle('active');
+        } else {
+            if(dropdown.classList.contains('active')){
+                dropdown.classList.remove('active');
+            }
+        }
+    })*/
+</script>
